@@ -15,10 +15,12 @@ A responsive, static one-page website for Trestle Security Consulting. The site 
 - `assets/structural-study.svg` — editable source for the temporary hero image
 - `assets/architecture-wide.webp` — **temporary About image** (replace later)
 - `BRAND-MESSAGING.md` — approved messaging and design rationale
+- `CNAME` — custom-domain hostname (`www.trestlescg.com`)
+- `CUSTOM-DOMAIN-SETUP.md` — instructions for GitHub Pages and DNS
 
 ## Upload to GitHub
 
-1. Create a GitHub repository, for example `trestle-website`.
+1. Open your existing GitHub repository: `wrcain/TrestleSCG`.
 2. Download and unzip the website package.
 3. In the repository, select **Add file → Upload files**. Drag the **contents** of the unzipped folder (including the `assets` folder), not the ZIP file itself, and commit the files.
 4. Make sure `index.html` is at the **repository root**, next to `styles.css` and `script.js`, and not nested inside another folder.
@@ -32,7 +34,7 @@ Alternatively, use Git on your computer to push the entire directory.
 3. Select the `main` branch and `/(root)` folder, then save.
 4. Once the Pages deployment completes, open the URL GitHub provides in the Pages settings. For a project repository, it typically has the shape `https://YOUR-USERNAME.github.io/REPOSITORY-NAME/`.
 
-To use `www.trestlescg.com` later, configure **Custom domain** in GitHub Pages and set the DNS records at the domain registrar per GitHub's current instructions. Then enable HTTPS after the domain is verified. **This package does not change DNS settings or publish the website for you.**
+To use **www.trestlescg.com**, see **`CUSTOM-DOMAIN-SETUP.md`** for exact GitHub Pages and DNS record instructions. The included `CNAME` file also identifies the intended custom domain. **This package does not change DNS settings or publish the website for you.**
 
 ## Preview locally
 
@@ -47,3 +49,8 @@ Open `index.html` in a browser. All core functionality and image assets work wit
 - Consider adding a privacy policy if you later use analytics, a hosted contact form, or other tracking.
 
 The website is a working static draft, not an already-published site.
+
+## Latest content changes
+
+- Both **Discuss your project** (top) and **Discuss a project** (section 06) open a new email to `wes@trestlescg.com` with a project inquiry subject. Visitors need an email app or browser email handler configured.
+- In **06 / LET'S CONNECT**, **POINT OF CONTACT — Wes Cain, Principal Consultant** appears immediately above the email address.

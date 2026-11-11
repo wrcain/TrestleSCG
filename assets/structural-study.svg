@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1140">
+<defs>
+  <linearGradient id="ambient" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#d6cbbb"/><stop offset=".35" stop-color="#bcb6a8"/><stop offset="1" stop-color="#454b40"/></linearGradient>
+  <linearGradient id="sky" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#e9e3d5"/><stop offset="1" stop-color="#adb3a7"/></linearGradient>
+  <linearGradient id="floor" x1="0" y1="0" x2=".8" y2="1"><stop stop-color="#c8bdae"/><stop offset="1" stop-color="#77796d"/></linearGradient>
+  <linearGradient id="post" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#3f473e"/><stop offset=".28" stop-color="#696d60"/><stop offset=".72" stop-color="#898a7e"/><stop offset="1" stop-color="#4c5348"/></linearGradient>
+  <linearGradient id="stone" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#aaa89c"/><stop offset=".35" stop-color="#d9d2c3"/><stop offset="1" stop-color="#85897c"/></linearGradient>
+  <linearGradient id="shade" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#252f2b"/><stop offset="1" stop-color="#5c6155"/></linearGradient>
+  <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#b4b2a5"/><stop offset=".5" stop-color="#5c6b67"/><stop offset="1" stop-color="#242d2b"/></linearGradient>
+  <linearGradient id="sun" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#fcf4de" stop-opacity=".4"/><stop offset="1" stop-color="#f8ecda" stop-opacity="0"/></linearGradient>
+  <radialGradient id="halo" cx=".19" cy=".22" r=".9"><stop stop-color="#fff2db" stop-opacity=".85"/><stop offset=".55" stop-color="#fff9ea" stop-opacity=".03"/><stop offset="1" stop-color="#252e26" stop-opacity=".18"/></radialGradient>
+  <filter id="grain"><feTurbulence type="fractalNoise" baseFrequency=".46" numOctaves="3" seed="11" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/><feComponentTransfer><feFuncA type="linear" slope="0.16"/></feComponentTransfer></filter>
+  <filter id="soft"><feGaussianBlur stdDeviation="21"/></filter>
+  <filter id="shadeSoft"><feGaussianBlur stdDeviation="11"/></filter>
+  <clipPath id="scene"><rect width="1000" height="1140"/></clipPath>
+</defs>
+<g clip-path="url(#scene)">
+  <rect width="1000" height="1140" fill="url(#ambient)"/>
+  <!-- Glazing in the distance -->
+  <polygon points="0,0 1000,0 1000,864 0,860" fill="url(#sky)"/>
+  <polygon points="650,155 1000,196 1000,908 650,826" fill="url(#glass)"/>
+  <polygon points="721,174 742,179 742,854 721,845" fill="#414e49" opacity=".75"/>
+  <polygon points="860,188 885,194 885,877 860,860" fill="#414e49" opacity=".75"/>
+  <polygon points="914,200 1000,214 1000,900 914,876" fill="#a0a89f" opacity=".18"/>
+  <!-- Deep overhead roof / longitudinal cantilever: projective geometry -->
+  <polygon points="-80,-70 1045,-70 1045,340 695,247 255,125 -80,214" fill="#77796d"/>
+  <polygon points="-60,67 1015,148 1015,270 643,219 278,163 -60,230" fill="#d5cfbf"/>
+  <polygon points="0,212 290,164 647,223 1000,276 1000,326 648,281 295,211 0,270" fill="#3b433e"/>
+  <polygon points="0,269 298,211 649,283 1000,327 1000,349 644,310 291,245 0,315" fill="#292f2d"/>
+  <polygon points="0,235 295,183 650,244 1000,294" fill="none" stroke="#f7e7cd" stroke-width="3" opacity=".6"/>
+  <!-- Cross-beam: built structure emphasized -->
+  <polygon points="145,192 207,200 828,495 787,535" fill="#373f39"/>
+  <polygon points="207,200 227,202 855,472 828,495" fill="#7e8173"/>
+  <polygon points="825,474 882,489 420,852 381,821" fill="#373d36"/>
+  <polygon points="882,489 902,491 451,860 420,852" fill="#929285"/>
+  <!-- Peripheral beams recede with perspective -->
+  <polygon points="423,236 451,244 970,498 944,514" fill="#4b5248" opacity=".9"/>
+  <polygon points="445,249 452,252 970,498 958,500" fill="#bdb6a8" opacity=".7"/>
+  <!-- back floor and balcony -->
+  <polygon points="0,765 1000,863 1000,1140 0,1140" fill="url(#floor)"/>
+  <path d="M0 810 L1000 910 M0 899 L1000 966 M0 990 L1000 1040" fill="none" stroke="#e9dfcb" opacity=".25" stroke-width="3"/>
+  <path d="M250 785 L112 1140 M550 817 L565 1140 M756 837 L998 1140" fill="none" stroke="#474f46" opacity=".19" stroke-width="4"/>
+  <!-- cast dramatic shadows across floor -->
+  <polygon points="340,763 500,783 110,1140 -75,1140" fill="#303b35" opacity=".19"/>
+  <polygon points="690,820 770,827 600,1140 490,1140" fill="#303b35" opacity=".24"/>
+  <polygon points="800,856 862,866 835,1140 720,1140" fill="#303b35" opacity=".24"/>
+  <!-- Main steel frame: tapered columns, subtle 3D sides -->
+  <polygon points="255,179 353,197 367,861 277,841" fill="url(#post)"/>
+  <polygon points="353,197 392,184 409,857 367,861" fill="#353d37"/>
+  <polygon points="255,179 292,157 392,184 353,197" fill="#8e9185"/>
+  <polygon points="277,841 367,861 409,857 307,836" fill="#292f2c" opacity=".45"/>
+  <polygon points="609,279 676,296 681,844 617,821" fill="url(#stone)"/>
+  <polygon points="676,296 706,287 711,858 681,844" fill="#656b61"/>
+  <polygon points="609,279 642,269 706,287 676,296" fill="#e0d8c7"/>
+  <!-- mid distance supporting column -->
+  <polygon points="835,320 875,327 883,864 840,852" fill="#5f685e"/>
+  <polygon points="875,327 893,321 904,875 883,864" fill="#38433d"/>
+  <!-- distinctive connection bolt and reinforcing plate -->
+  <polygon points="251,210 359,228 359,303 259,280" fill="#485048" opacity=".8"/>
+  <path d="M271 225 L342 236 M273 266 L342 281" stroke="#afb09f" opacity=".35" stroke-width="4"/>
+  <g fill="#c9c5b6" opacity=".75"><circle cx="277" cy="237" r="4"/><circle cx="335" cy="248" r="4"/><circle cx="279" cy="264" r="4"/><circle cx="337" cy="277" r="4"/></g>
+  <!-- diffuse concrete sheen -->
+  <ellipse cx="148" cy="348" rx="180" ry="350" fill="#fff1d2" opacity=".21" filter="url(#soft)"/>
+  <polygon points="0,305 226,247 225,900 0,928" fill="url(#sun)"/>
+  <rect width="1000" height="1140" fill="url(#halo)"/>
+  <rect width="1000" height="1140" filter="url(#grain)" opacity=".43"/>
+  <rect width="1000" height="1140" fill="#363e35" opacity=".04"/>
+</g>
+</svg>
